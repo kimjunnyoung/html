@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord</title>
+  <link href="images/icon.png" rel="shortcut icon" type="image/x-icon">
+  <style>
+
+    a{
+      text-decoration: none;
+      color: rgb(78, 155, 243);
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url(images/join.png);
+    }
+    
+    form{
+      width: 440px;
+      height: 580px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #303030;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border-style: none;
+    }
+    
+    h1{
+      text-align: center;
+      color: white;
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    
+    label{
+      display: block;
+      font-size: 13px;
+      color: rgb(155, 154, 154);
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    input[type="text"], input[type="email"], input[type="password"], input[type="submit"]{
+      width: 90%;
+      padding: 13px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      background-color: #424242;
+      border-style: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      color: rgb(155, 154, 154);
+      font-size: 15px;
+    }
+
+    #email, #username, #password{
+      margin: 10px 20px;
+    }
+    
+    input[type="submit"]{
+      background-color: #6470eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 1px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type="checkbox"]{
+      margin-top: 15px;
+      margin-left: 25px;
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+      appearance: none;
+      border-radius: 30%;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked{
+      background-color: #6470eb;
+      border: none;
+    }
+
+
+    .check p{
+      float: right;
+      width: 360px;
+      margin-right: 25px;
+      font-size: 12px;
+      color: rgb(155, 154, 154);
+    }
+
+    select{
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      box-sizing: border-box;
+      width: calc(28% - 8px);
+      margin-left: 19px;
+      background-color: #424242;
+      color: rgb(155, 154, 154);
+      border-style: none;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    input[type="submit"]:hover{
+      background-color: #414cc5;
+    }
+
+    .bottom p{
+      margin-left: 25px;
+      margin-right: 25px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: rgb(155, 154, 154);
+    }
+
+    .bottom2 p{
+      margin-left: 25px;
+      margin-right: 25px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: rgb(155, 154, 154);
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="show(event)">
+    <h1>Ein Konto erstellen</h1> 
+    <label for="email">E-Mail-Adresse</label>
+    <input type="email" id="email" name="email" required>
+    <label for="username">Benutzername</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Kennwort</label>
+    <input type="password" id="password" name="password" required>
+    <div>
+      <label>Geburtsdatum</label>
+      <select name="year" id="year">
+        <option value="">Jahr</option>
+        <option value="1990">1990</option>
+        <option value="1991">1991</option>
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>        
+      </select>
+      <select name="month" id="month">
+        <option value="">Monat</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <select name="day" id="day">
+        <option value="">Arbeit</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+      </select>
+    </div>
+    <div class="check">
+      <input type="checkbox">
+      <p>(Optional) Senden Sie mir Nachrichten, Hilfe und Sonderangebote von Discord. Sie können jederzeit kündigen.</p>
+    </div>
+      <input type="submit" value="Fortfahren">
+      <div class="bottom">
+        <p><a href="loginge.html">Haben Sie bereits ein Konto?</a></p>
+        <div class="bottom2">
+          <p>Discord bei der Registrierung<a href="https://discord.com/terms">Allgemeine Geschäftsbedingungen</a> <a href="https://discord.com/privacy">Datenschutzerklärung</a>Sie stimmen zu.</p>
+        </div>
+      </div>
+  </form>
+  <script>
+    function show() {
+      event.preventDefault();
+      var result = confirm('Herzlichen Glückwunsch zum Beitritt! \nDer Bestätigungs-Button bringt Sie zur Anmeldeseite. \nKlicken Sie auf Abbrechen, um zur Hauptseite zu gelangen.');
+      if (result) {
+        window.location.href = "loginge.html";
+      } else {
+        window.location.href = "discordge.html"
+      }
+    }
+  </script>
+</body>
+</html>

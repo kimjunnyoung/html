@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord</title>
+  <link rel="stylesheet" href="join.css">
+  <link href="images/icon.png" rel="shortcut icon" type="image/x-icon">
+  <style>
+    a{
+      text-decoration: none;
+      color: rgb(78, 155, 243);
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url(images/join.png);
+    }
+    
+    .container{
+      display: flex;
+      align-items: center;
+      width: 780px;
+      height: 400px;
+      background-color: #303030;
+      color: rgb(155, 154, 154);
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-sizing: border-box;
+      border-style: none;
+      border-radius: 5px;
+    }
+    
+    .login{
+      width: 410px;
+      display: flex;
+      flex-direction: column;
+      margin-right: 65px;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+
+    .login h3, .login h5{
+       text-align: center;
+       margin: 4px 0;
+       font-weight: bold;
+    }
+
+    .login h3{
+      font-size: 22px;
+      color: white;
+    }
+
+    .login h5{
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .login label{
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .login label::after{
+      content: ' *';
+      color: red;
+      font-size: 12px;
+    }
+    
+    .login input[type="text"], .login input[type="password"], .login input[type="submit"]{
+      width: 410px;
+      padding: 13px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border-style: none;
+      border-radius: 5px;
+      background-color: #424242;
+      color: white;
+    }
+    
+    .login input[type="submit"]{
+      background-color: #6470eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 15px;
+    }
+
+    .login input[type="submit"]:hover{
+      background-color: #414cc5;
+    }
+    
+    .image{
+      width: 240px;
+      margin-left: 3px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .image img{
+      width: 80%;
+      height: auto;
+    }
+
+    .image h3{
+      font-size: 22px;
+      color: white;
+    }
+
+    .image p{
+      font-size: 15px;
+      margin-top: -15px;
+      text-align: center;
+    }
+
+    .pass, .join{
+      font-size: 14px;
+    }
+
+    .pass p{
+      margin-top: -7px;
+    }
+
+    .join p{
+      margin-top: -7px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form class="login" onsubmit="Lo(event)">
+      <h3>돌아오신 것을 환영해요!</h3>
+      <h5>다시 만나다니 너무 반가워요!</h5>
+      <label for="username"><b>이메일 또는 전화번호</b></label>
+      <input type="text" id="username" name="username" required>
+      <label for="password"><b>비밀번호</b></label>
+      <input type="password" id="password" name="password" required>
+      <div class="pass">
+        <a href="#"><p onclick="alert('준비중입니다.')">비밀번호를 잊으셨나요?</p></a>
+      </div>
+      <input type="submit" value="로그인">
+      <div class="join">
+        <p>계정이 필요한가요? <a href="join.html">가입하기</a></p>
+      </div>
+    </form>
+    <div class="image">
+      <img src="images/chun.gif" alt="이미지">
+      <h3>QR 코드로 로그인</h3>
+      <p><b>모바일 앱으로 스캔해 바로 로그인하세요.</b></p>
+    </div>
+  </div>
+  <script>
+    function Lo() {
+      event.preventDefault(); // 폼의 페이지 새로고침을 방지함
+      alert('로그인 되셨습니다!'); // 로그인 되었다는 알림 표시
+      window.location.href = "discord.html"; // 메인 페이지로 이동
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        // 로그인 폼 제출 버튼을 찾아 클릭
+        document.querySelector('form.login input[type="submit"]').click();
+      }
+    });
+  </script>
+</body>
+</html>

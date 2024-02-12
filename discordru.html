@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord | Пространство для разговора и соответствия</title>
+    <link href="images/icon.png" rel="short cut icon" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8db04f8f64.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background-color: #404eed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/main.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-left: -400px;
+}
+
+#logo nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#logo nav img {
+  width: 140px;
+  margin-top: 10px;
+  margin-right: 80px;
+  cursor: pointer;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.menu button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 50px;
+  float: right;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+.menu button:hover {
+  color: blue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.down1:hover {
+  color: blue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.down2:hover {
+  background-color: rgb(41, 41, 41);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.infor {
+  margin-top: 100px;
+}
+
+.infor h1 {
+  font-size: 55px;
+  color: white;
+  font-weight: bold;
+  margin: 50px auto;
+  text-align: center;
+  width: 700px;
+}
+
+.infor p {
+  font-size: 18px;
+  color: white;
+  margin: 30px auto;
+  text-align: center;
+  width: 700px;
+  line-height: 1.8em;
+}
+
+.downl {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.down1 {
+  margin-right: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 15px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.down2 {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.im img {
+  width: 100%;
+  max-height: 100px;
+  margin: 20px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  margin: 60px auto;
+}
+
+section img {
+  width: 900px;
+}
+
+section h1 {
+  font-size: 30px;
+  width: 400px;
+}
+
+section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+#one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+}
+
+#one img {
+  order: -1;
+  margin-right: 20px;
+}
+
+#one h1,
+#one p {
+  margin: 50px;
+}
+
+#two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: rgb(226, 225, 225);
+  width: 100%;
+}
+
+#two img {
+  margin-left: 0;
+}
+
+#two h1,
+#two p {
+  margin: 50px;
+}
+
+#three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  width: 100%;
+}
+
+#three img {
+  margin-right: 20px;
+}
+
+#three h1,
+#three p {
+  margin: 50px;
+}
+
+#four {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(226, 225, 225);
+  width: 100%;
+}
+
+#four h1{
+  margin-top: 100px;
+}
+
+#four p {
+  margin: 20px;
+}
+
+#four img {
+  margin-top: 20px;
+  width: 1200px;
+}
+
+#five .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-container img{
+  width: 500px;
+  height: 50px;
+}
+
+#five .contents {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.contents h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+#five button {
+  background-color: #404eed;
+  color: white;
+  padding: 20px 30px;
+  width: fit-content;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+#four,
+#five {
+  background-color: rgb(226, 225, 225);
+  padding: 0;
+  margin: 0;
+}
+
+.contents button:hover{
+  background-color: #6470eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer{
+  background-color: #23272a;
+  padding-top: 80px;
+  padding-bottom: 64px;
+}
+
+#foot{
+  color: white;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#ic{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button{
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.flag-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.icona{
+  margin-top: 40px;
+}
+
+.icona i {
+  margin-right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+nav{
+  padding-left: 400px;
+  margin-top: -85px;
+  line-height: 1.8em;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+nav h5{
+  font-size: 17px;
+  color: #404eed;
+  padding-bottom: 10px;
+}
+
+.one1{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  float: left;
+}
+
+.one2{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  float: left;
+}
+
+.one3{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  float: left;
+}
+
+.one4{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  float: left;
+}
+
+.join{
+  border-top: 1px solid #404eed;
+  margin-top: 450px;
+}
+
+.join img{
+  width: 140px;
+  padding-left: 20px;
+  margin-right: 850px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.join button{
+  background-color: #404eed;
+  color: white;
+  padding: 10px 20px;
+  width: fit-content;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.join button:hover {
+  background-color: #6470eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  opacity: 0; /*투명도 0으로 해서 숨겨진 상태로 보여줌*/
+  transform: translateY(50px); /*섹션 요소 수직으로 50px 아래로 이동*/
+  transition: opacity 0.5s ease, transform 0.5s ease; /*투명도와 변형에 대하 전환 효과 0.5초간 적용*/
+}
+
+section.show {
+  opacity: 1; /*투명도 1로 해서 보여줌 */
+  transform: translateY(0); /*추가된 섹션 요소 수직으로 이동하지 않고 워래 위치로 돌려놓음*/
+}
+
+.btn-nav {
+  position: absolute;
+  right: 15px;
+  top: 22px;
+  font-size: 25px;
+  color: beige;
+  background-color: #404eed;
+  border-style: none;
+  cursor: pointer;
+}
+
+.bts{
+  text-align: right;
+  font-size: 25px;
+  padding-right: 15px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.hidden-ul{
+  width: 240px;
+  z-index: 2;
+}
+
+.hidden-ul img{
+  width: 80px;
+  height: 30px;
+  position: relative;
+  top: 55px;
+  left: 20px;
+}
+
+.hidden-ul li{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden-ul li a:hover{
+  background-color: beige;
+}
+
+.hidden-ul li a{
+  color: black;
+  font-size: 16px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 20px;
+}
+
+.hidden-ul li a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .menu li{
+    display: none;
+  }
+
+  #logo{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-nav{
+    display: block;
+  }
+
+  .hiddenbar{
+    display: none;
+  }
+
+  .hiddenbar.active {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    display: flex;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 5000px){
+  .btn-nav{
+    display: none;
+  };
+
+  .hiddenbar{ 
+    display: none;
+  }
+
+  .hiddenbar > .hidden-ul{
+    display: none ;
+  }
+
+
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <nav>
+                    <a href="discordru.html"><img src="images/logo.png"></a>
+                    <ul class="menu">
+                        <li><a href="https://discord.com/download">Загрузка</a></li>
+                        <li><a href="https://discord.com/nitro">Нитро</a></li>
+                        <li><a href="https://discord.com/servers">Поиск</a></li>
+                        <li><a href="https://discord.com/safetycenter">Центр безопасности</a></li>
+                        <li><a href="https://support.discord.com">помощь</a></li>
+                        <li><a href="https://discord.com/blog">Блог</a></li>
+                        <li><a href="https://discord.com/careers">Набор талантов</a></li>
+                        <a href="loginru.html"><button>Вход</button></a>
+                    </ul>
+                </nav>
+                <button class="btn-nav"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="hiddenbar">
+                <ul class="hidden-ul">
+                    <img src="images/logo2.png">
+                    <li class="bts"><i class="fa-solid fa-xmark"></i></li>
+                    <li><a href="discord.html">канавка</a></li>
+                    <li><a href="https://discord.com/download">Загрузка</a></li>
+                    <li><a href="https://discord.com/nitro">Нитро</a></li>
+                    <li><a href="https://discord.com/servers">Поиск</a></li>
+                    <li><a href="https://discord.com/safetycenter">Центр безопасности</a></li>
+                    <li><a href="https://discord.com/moderation">Академия мод</a></li>
+                    <li><a href="https://support.discord.com">помощь</a></li>
+                    <li><a href="https://discord.com/blog">Блог</a></li>
+                    <li><a href="https://discord.com/careers">Набор талантов</a></li>
+                </ul>
+            </div>
+            <div id="g">
+                <section class="infor">
+                    <h1>Что если бы было такое пространство...</h1>
+                    <p>...в школьном клубе, игровой группе и Всемирном сообществе ценителей искусства, чтобы почувствовать связь.
+                        Наше собственное пространство для общения с дорогими лучшими друзьями. Это место, где мы можем общаться и разговаривать каждый день.</p>
+                </section>
+                <section class="downl">
+                    <a href="#"><button class="down1"><i class="fas fa-arrow-down"></i> Загрузки для Windows</button></a>
+                    <a href="#"><button class="down2">Открыть Discord в веб- браузере</button></a>
+                </section>
+            </div>
+        </header>
+        <main class="content">
+            <section id="one">
+                <img src="images/1.png">
+                <div>
+                    <h1>Создай для меня огромное эксклюзивное пространство.</h1>
+                    <p>Discord Server является тематическим каналом или базируется на нём. В экстренной комнате вы можете грязно, поделиться своими историями и ухватиться за них.</p>
+                </div>
+            </section>
+            <section id="two">
+                <div>
+                  <h1>Легко найти строку</h1>
+                  <p>Вы можете вмешаться в канал, если вы свободны как мо. Без необходимости звонить, вы можете войти и поговорить с друзьями на сервере одновременно.</p>
+                </div>
+                <img src="images/2.png">
+              </section>
+              <section id="three">
+                <img src="images/3.png">
+                <div>
+                  <h1>От мини-собрания до фандома</h1>
+                  <p>Указываются инструменты управления, которые могут работать в любом сообществе, и полномочия его членов могут быть преступными. Предоставьте своим членам особые полномочия или создайте секретный канал.</p>
+                </div>
+              </section>
+            <section id="four">
+                <h1>Технология с высокой степенью близости и доверия</h1>
+                <p>С помощью видеочата с авторами, кажется, что они полностью в одном пространстве. Вы можете поздороваться по видео, посмотреть трансляцию игр ваших друзей или рисовать вместе на экране.</p>
+                <img src="images/4.png">
+            </section>
+            <section id="five">
+                <div class="image-container">
+                    <img src="images/5.png">
+                    <div class="contents">
+                        <h1>Давайте начнем?</h1>
+                        <a href="#"><button><i class="fas fa-arrow-down"></i> Загрузки для Windows</button></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="foot">
+                <div id="ic">
+                    <div class="dropdown">
+                        <button class="dropbtn"><a href="discordru.html"><img src="images/ru.png" alt="러시아 국기" class="flag-icon">
+                          Русский</button></a>
+                        <div class="dropdown-content">
+                        <a href="discordjp.html"><img src="images/japan.png" alt="일본 국기" class="flag-icon">
+                            японский язык</a>
+                        <a href="discordusa.html"><img src="images/usa.png" alt="미국 국기" class="flag-icon">
+                            Английский язык</a>
+                        <a href="discordch.html"><img src="images/china.png" alt="중국 국기" class="flag-icon">
+                            китайский язык</a>
+                        <a href="discordfr.html"><img src="images/france.png" alt="프랑스 국기" class="flag-icon">
+                            францу́зский язы́к</a>
+                        <a href="discord.html"><img src="images/korea.png" alt="한국 국기" class="flag-icon">
+                            Корейский язык  Р</a>
+                        <a href="discordge.html"><img src="images/gu.png" alt="독일 국기" class="flag-icon">
+                            немецкий язык</a>
+                        </div>
+                    </div>
+                    <div class="icona">
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="one1">
+                        <h5>изделие</h5>
+                        <li><a href="#">загрузка</a></li>
+                        <li><a href="#">Нитро</a></li>
+                        <li><a href="#">Введение продукта</a></li>
+                    </ul>
+                    <ul class="one2">
+                        <h5>Офис</h5>
+                        <li><a href="#">знакомство</a></li>
+                        <li><a href="#">приём на работу</a></li>
+                        <li><a href="#">брэнд, марка</a></li>
+                        <li><a href="#">новости</a></li>
+                    </ul>
+                    <ul class="one3">
+                        <h5>Ресурсы</h5>
+                        <li><a href="#">университет</a></li>
+                        <li><a href="#">помощь</a></li>
+                        <li><a href="#">Безопасность</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">обратное питание</a></li>
+                        <li><a href="#">Набор потоков</a></li>
+                        <li><a href="#">производитель</a></li>
+                        <li><a href="#">Сообщество</a></li>
+                        <li><a href="#">Разработчик</a></li>
+                        <li><a href="#">Товары для официальной третьей вечеринки</a></li>
+                    </ul>
+                    <ul class="one4">
+                        <h5>политика</h5>
+                        <li><a href="#">Условия использования</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Настроить файлы « cookie »</a></li>
+                        <li><a href="#">указатель</a></li>
+                        <li><a href="#">благодарность</a></li>
+                        <li><a href="#">разреше́ние</a></li>
+                        <li><a href="#">чиновник</a></li>
+                        <li><a href="#">Сведения о компании</a></li>
+                    </ul>
+                </nav>
+                <section class="join">
+                    <a href="discordru.html"><img src="images/white.png"></a>
+                    <a href="joinru.html"><button>Присоединиться</button></a>
+                </section>
+            <div></div>
+        </footer>
+    </div> 
+    <script>
+    var sections = document.querySelectorAll('section'); //요소를 선택
+    var sectionPoint = 100; //상단으로부터 얼마나 떨어져야 보일지 나타내는 픽셀 값
+    
+    function revealSections() { //보여주는 역할
+      for (var i = 0; i < sections.length; i++) {
+        var windowHeight = window.innerHeight;
+        var sectionTop = sections[i].getBoundingClientRect().top;
+    
+        if (sectionTop < windowHeight - sectionPoint) {
+          sections[i].classList.add('show'); //getBoundingClientRect().top 와 window.innerHeight 비교해서 화면에 보여져야 할 위치에 도달하면 show 클래스 추가
+        }
+      }
+    }
+    
+    revealSections(); //초기에 함수 호출해서 섹션 보여줌
+    
+    window.addEventListener('scroll', function() {
+      revealSections(); //스크롤 할 때마다 함수 호출하여 보여줌
+    });
+
+
+    const burger = document.querySelector('.btn-nav');
+    const hiddenList = document.querySelector('.hiddenbar');
+    const close = document.querySelector('.bts');
+
+    burger.addEventListener('click', () => {
+        hiddenList.classList.toggle('active');
+    });
+
+    close.addEventListener('click', () => {
+        hiddenList.classList.toggle('active');
+    });  
+</script>
+</body>
+</html>
